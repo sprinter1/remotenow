@@ -1,4 +1,4 @@
-require('dotenv').config();
+// dotenv not needed on Railway - env vars are injected automatically
 const express = require('express');
 const cors = require('cors');
 const authRoutes = require('./routes/auth');
