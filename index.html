@@ -584,8 +584,6 @@ let activeCategory = 'all';
 let visibleCount = 8;
 let savedJobs = new Set();
 
-function timeAgo(str){ return str; }
-
 function renderJobs() {
   const query = (document.getElementById('searchInput').value || '').toLowerCase();
   let filtered = JOBS.filter(j => {
@@ -631,9 +629,7 @@ function setCategory(el, cat) {
 }
 
 function filterJobs() { visibleCount = 8; renderJobs(); }
-
 function loadMore() { visibleCount += 4; renderJobs(); }
-
 function toggleFilter(el) { el.classList.toggle('active'); }
 
 function toggleSave(e, id) {
@@ -648,7 +644,6 @@ function openJob(id) {
 }
 
 document.getElementById('searchInput').addEventListener('input', filterJobs);
-
 renderJobs();
 </script>
 </body>
